@@ -1,0 +1,61 @@
+﻿@page
+@model StarWars.Games.BackOffice.Web.UI.Pages.ListStatisticModel
+@{
+}
+
+<div class="row">
+	<div class="dropdown">
+		<button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+			Dropdown button
+		</button>
+		<ul class="dropdown-menu">
+			@for (int i = 0; i < 10; i++)
+			{
+				<li><a class="dropdown-item" href="@(i + 2020)">@(i + 2020)</a></li>
+			}			
+		</ul>
+	</div>
+</div>
+
+<div class="row">
+	<h1>List des stats</h1>
+	@if (Model.List != null)
+	{
+		@foreach (var item in Model.List)
+		{
+			<div class="col-md">
+				<div class="card">
+					<div class="card-body">
+						<h2 class="card-title">@(item.Annee.ToString() + " " + item.Mois.ToString())</h2>
+						@{
+							var listFailed = item.GameList.Where(item => item.Etat == "Failed");
+							var listSuccess = item.GameList.Where(item => item.Etat == "Success");
+						}
+						<div>
+							<h3>
+								Parties gagnées : @listSuccess.Count()
+							</h3>
+							<div class="row">
+								@foreach (var game in listSuccess)
+								{
+									<a>@game.Date</a>
+								}
+							</div>
+						</div>
+						<div>
+							<h3>
+								Parties perdues : @listFailed.Count()
+							</h3>
+							<div class="row">
+								@foreach (var game in listFailed)
+								{
+									<a>@game.Date</a>
+								}
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		}
+	}
+</div>
