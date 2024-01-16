@@ -3,7 +3,7 @@ using StarWars.Games.Core.Interfaces;
 
 namespace StarWars.BackOffice.Core.Services
 {
-	public class StatisticService : IStatisticService
+	public class StatisticService : BaseService<Statistic>, IStatisticService
 	{
 		private readonly ICustomLogger logger;
 
@@ -12,7 +12,7 @@ namespace StarWars.BackOffice.Core.Services
 			this.logger = logger;
 		}
 
-		public List<Statistic> GetAll()
+		public override List<Statistic> GetAll()
 		{
 			this.logger.Log("Get all appelée");
 

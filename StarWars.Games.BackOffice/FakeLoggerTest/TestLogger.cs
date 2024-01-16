@@ -1,4 +1,5 @@
 ﻿using StarWars.Games.Core.Interfaces;
+using System.Diagnostics;
 
 namespace FakeLoggerTest
 {
@@ -6,7 +7,7 @@ namespace FakeLoggerTest
 	{
 		public void Log(string message)
 		{
-			throw new NotImplementedException();
+			Debug.WriteLine(message);
 		}
 	}
 }

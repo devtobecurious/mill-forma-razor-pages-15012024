@@ -2,7 +2,7 @@
 
 namespace StarWars.Games.Core.Interfaces
 {
-	public interface IStatisticService : IGetAll<Statistic>
+	public interface IGameService : IGetAll<Game>
 	{
 	}
 }

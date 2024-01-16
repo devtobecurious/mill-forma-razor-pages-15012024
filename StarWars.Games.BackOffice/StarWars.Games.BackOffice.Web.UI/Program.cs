@@ -1,6 +1,6 @@
+using FakeLoggerTest;
 using StarWars.BackOffice.Core.Services;
 using StarWars.Games.Core.Interfaces;
-using StarWars.Games.Core.Tools;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,8 +13,8 @@ builder.Services.AddSingleton<ICustomLogger, TestLogger>();
 #else
 builder.Services.AddSingleton<ICustomLogger, FileCustomLogger>();
 #endif
+builder.Services.AddScoped<IGameService, InMemoryGameService>();
 builder.Services.AddScoped<IStatisticService, StatisticService>();
-
 #endregion
 
 var app = builder.Build();
