@@ -1,4 +1,6 @@
 using FakeLoggerTest;
+using Microsoft.EntityFrameworkCore;
+using StarWars.BackOffice.Core.Models.Data;
 using StarWars.BackOffice.Core.Services;
 using StarWars.Games.Core.Interfaces;
 
@@ -13,7 +15,13 @@ builder.Services.AddSingleton<ICustomLogger, TestLogger>();
 #else
 builder.Services.AddSingleton<ICustomLogger, FileCustomLogger>();
 #endif
-builder.Services.AddScoped<IVideoGameService, InMemoryVideoGameService>();
+
+builder.Services.AddDbContext<DefaultDbContext>(options =>
+{
+	options.UseSqlServer("Server=DESKTOP-1446PBQ;Database=StarWars.BackOffice.Db.DEV;Trusted_Connection=True;TrustServerCertificate=true");
+});
+
+builder.Services.AddScoped<IVideoGameService, SqlServerDbContextVideoGameService>();
 builder.Services.AddScoped<IGameService, InMemoryGameService>();
 builder.Services.AddScoped<IStatisticService, StatisticService>();
 #endregion
