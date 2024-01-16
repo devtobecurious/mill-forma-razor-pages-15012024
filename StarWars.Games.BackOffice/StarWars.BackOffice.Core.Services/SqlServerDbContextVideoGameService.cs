@@ -25,7 +25,7 @@ namespace StarWars.BackOffice.Core.Services
 
 			return this.context.VideoGames
 								.Where(item => item.Name != "")
-								.Select(item => item)
+								.Select(item => item) // A en parler
 								.Take(100) // perf à parler
 								.ToList(); // c'est le ToList qui lance la requête SQL !! 
 		}
