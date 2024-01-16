@@ -7,7 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\StarWars.BackOffice.Core.Models\StarWars.BackOffice.Core.Models.csproj" />
     <ProjectReference Include="..\StarWars.Games.Core.Interfaces\StarWars.Games.Core.Interfaces.csproj" />
   </ItemGroup>
 

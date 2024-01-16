@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -8,8 +8,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FakeLoggerTest\FakeLoggerTest.csproj" />
     <ProjectReference Include="..\StarWars.BackOffice.Core.Models\StarWars.BackOffice.Core.Models.csproj" />
     <ProjectReference Include="..\StarWars.BackOffice.Core.Services\StarWars.BackOffice.Core.Services.csproj" />
+    <ProjectReference Include="..\StarWars.Games.Core.Interfaces\StarWars.Games.Core.Interfaces.csproj" />
+    <ProjectReference Include="..\StarWars.Games.Core.Tools\StarWars.Games.Core.Tools.csproj" />
   </ItemGroup>
 
 </Project>

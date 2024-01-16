@@ -3,15 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34330.188
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWars.Games.BackOffice.Web.UI", "StarWars.Games.BackOffice.Web.UI\StarWars.Games.BackOffice.Web.UI.csproj", "{46DDF3FA-9361-4D2E-85B2-5FB5A19F2E63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarWars.Games.BackOffice.Web.UI", "StarWars.Games.BackOffice.Web.UI\StarWars.Games.BackOffice.Web.UI.csproj", "{46DDF3FA-9361-4D2E-85B2-5FB5A19F2E63}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{074322EF-AD26-47C8-8D2C-48C160D70414}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "UI", "UI", "{0A25387F-3E9F-4AD7-9184-A61221D25BD4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWars.BackOffice.Core.Models", "StarWars.BackOffice.Core.Models\StarWars.BackOffice.Core.Models.csproj", "{26BC6BB3-AF4C-4620-8D9A-6ADF11AB98EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarWars.BackOffice.Core.Models", "StarWars.BackOffice.Core.Models\StarWars.BackOffice.Core.Models.csproj", "{26BC6BB3-AF4C-4620-8D9A-6ADF11AB98EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWars.BackOffice.Core.Services", "StarWars.BackOffice.Core.Services\StarWars.BackOffice.Core.Services.csproj", "{2EDD014F-4ED3-4473-BB23-78576C6C5D5E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarWars.BackOffice.Core.Services", "StarWars.BackOffice.Core.Services\StarWars.BackOffice.Core.Services.csproj", "{2EDD014F-4ED3-4473-BB23-78576C6C5D5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWars.Games.Core.Interfaces", "StarWars.Games.Core.Interfaces\StarWars.Games.Core.Interfaces.csproj", "{ECC037DD-37CD-4FFC-9982-18AC370CA667}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWars.Games.Core.Tools", "StarWars.Games.Core.Tools\StarWars.Games.Core.Tools.csproj", "{F34EDA39-AFE5-4AA1-9949-9E523AC00C4B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakeLoggerTest", "FakeLoggerTest\FakeLoggerTest.csproj", "{233ED183-FDF7-4D58-A3E3-3F208D94ED06}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +37,18 @@ Global
 		{2EDD014F-4ED3-4473-BB23-78576C6C5D5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EDD014F-4ED3-4473-BB23-78576C6C5D5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EDD014F-4ED3-4473-BB23-78576C6C5D5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ECC037DD-37CD-4FFC-9982-18AC370CA667}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ECC037DD-37CD-4FFC-9982-18AC370CA667}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ECC037DD-37CD-4FFC-9982-18AC370CA667}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ECC037DD-37CD-4FFC-9982-18AC370CA667}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F34EDA39-AFE5-4AA1-9949-9E523AC00C4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F34EDA39-AFE5-4AA1-9949-9E523AC00C4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F34EDA39-AFE5-4AA1-9949-9E523AC00C4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F34EDA39-AFE5-4AA1-9949-9E523AC00C4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{233ED183-FDF7-4D58-A3E3-3F208D94ED06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{233ED183-FDF7-4D58-A3E3-3F208D94ED06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{233ED183-FDF7-4D58-A3E3-3F208D94ED06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{233ED183-FDF7-4D58-A3E3-3F208D94ED06}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +57,9 @@ Global
 		{46DDF3FA-9361-4D2E-85B2-5FB5A19F2E63} = {0A25387F-3E9F-4AD7-9184-A61221D25BD4}
 		{26BC6BB3-AF4C-4620-8D9A-6ADF11AB98EE} = {074322EF-AD26-47C8-8D2C-48C160D70414}
 		{2EDD014F-4ED3-4473-BB23-78576C6C5D5E} = {074322EF-AD26-47C8-8D2C-48C160D70414}
+		{ECC037DD-37CD-4FFC-9982-18AC370CA667} = {074322EF-AD26-47C8-8D2C-48C160D70414}
+		{F34EDA39-AFE5-4AA1-9949-9E523AC00C4B} = {074322EF-AD26-47C8-8D2C-48C160D70414}
+		{233ED183-FDF7-4D58-A3E3-3F208D94ED06} = {074322EF-AD26-47C8-8D2C-48C160D70414}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A47576BC-B440-4B50-9493-3BF1042A786E}

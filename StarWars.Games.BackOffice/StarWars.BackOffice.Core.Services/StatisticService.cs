@@ -1,11 +1,21 @@
 ﻿using StarWars.BackOffice.Core.Models;
+using StarWars.Games.Core.Interfaces;
 
 namespace StarWars.BackOffice.Core.Services
 {
-	public class StatisticService
+	public class StatisticService : IStatisticService
 	{
+		private readonly ICustomLogger logger;
+
+		public StatisticService(ICustomLogger logger)
+		{
+			this.logger = logger;
+		}
+
 		public List<Statistic> GetAll()
 		{
+			this.logger.Log("Get all appelée");
+
 			var list = new List<Statistic>();
 			list.Add(new Statistic()
 			{

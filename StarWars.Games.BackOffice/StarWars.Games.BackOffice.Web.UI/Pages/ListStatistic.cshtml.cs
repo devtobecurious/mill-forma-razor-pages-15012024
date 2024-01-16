@@ -1,14 +1,23 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using StarWars.BackOffice.Core.Models;
-using StarWars.BackOffice.Core.Services;
+using StarWars.Games.Core.Interfaces;
 
 namespace StarWars.Games.BackOffice.Web.UI.Pages
 {
 	public class ListStatisticModel : PageModel
 	{
+		private readonly ICustomLogger logger;
+		private readonly IStatisticService service;
+
+		public ListStatisticModel(ICustomLogger logger, IStatisticService service)
+		{
+			this.logger = logger;
+			this.service = service;
+		}
+
 		public void OnGet()
 		{
-			this.List = (new StatisticService()).GetAll();
+			this.List = this.service.GetAll();
 
 			//foreach (var item in this.List)
 			//{
