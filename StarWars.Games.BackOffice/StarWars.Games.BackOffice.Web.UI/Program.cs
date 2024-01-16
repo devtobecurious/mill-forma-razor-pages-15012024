@@ -13,6 +13,7 @@ builder.Services.AddSingleton<ICustomLogger, TestLogger>();
 #else
 builder.Services.AddSingleton<ICustomLogger, FileCustomLogger>();
 #endif
+builder.Services.AddScoped<IVideoGameService, InMemoryVideoGameService>();
 builder.Services.AddScoped<IGameService, InMemoryGameService>();
 builder.Services.AddScoped<IStatisticService, StatisticService>();
 #endregion
