@@ -1,30 +1,15 @@
-using FakeLoggerTest;
-using Microsoft.EntityFrameworkCore;
-using StarWars.BackOffice.Core.Models.Data;
-using StarWars.BackOffice.Core.Services;
-using StarWars.Games.Core.Interfaces;
+using StarWars.Games.BackOffice.Web.UI.App_Code.MethodesExtensions;
 
 var builder = WebApplication.CreateBuilder(args);
 
 #region Injection de dépendances / Paramétrages
 builder.Services.AddRazorPages();
 
-//TODO: 16/01/2024: Refacto => méthodes d'extension
-#if DEBUG
-builder.Services.AddSingleton<ICustomLogger, TestLogger>();
-#else
-builder.Services.AddSingleton<ICustomLogger, FileCustomLogger>();
-#endif
+builder.Services.AddHttpClient();
 
-builder.Services.AddDbContext<DefaultDbContext>(options =>
-{
-	options.UseSqlServer("Server=DESKTOP-1446PBQ;Database=StarWars.BackOffice.Db.DEV;Trusted_Connection=True;TrustServerCertificate=true");
-});
-
-builder.Services.AddScoped<IVideoGameService, SqlServerDbContextVideoGameService>();
-builder.Services.AddScoped<IGameService, InMemoryGameService>();
-builder.Services.AddScoped<IStatisticService, StatisticService>();
+builder.Services.AddCustomInjectionDependances();
 #endregion
+
 
 var app = builder.Build();
 

@@ -34,6 +34,18 @@
 	</div>
 </div>
 
+<div class="row">
+	@{
+		var listPersos = Model.Personnages.Select(item => new SelectListItem() { Value = item.Id.ToString(), Text = item.Surname });
+	}
+	<div class="col-3">
+		<label for="date" class="form-label">Personnage</label>
+		<select asp-items="listPersos" class="form-select form-select-lg mb-3" aria-label="Le perso">
+			<option></option>
+		</select>
+	</div>
+</div>
+
 @section Css 
 {
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
