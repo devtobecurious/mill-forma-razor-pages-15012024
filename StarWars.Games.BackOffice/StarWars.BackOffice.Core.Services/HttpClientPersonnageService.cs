@@ -12,9 +12,12 @@ namespace StarWars.BackOffice.Core.Services
 			this.client = client;
 		}
 
-		public async List<PersonneAJouer> GetAll()
+		//public async List<PersonneAJouer> GetAll()
+		public List<PersonneAJouer> GetAll()
 		{
-			var result = await this.client.GetAsync("swapi");
+			//var result = await this.client.GetAsync("swapi");
+
+			return new List<PersonneAJouer>();
 		}
 	}
 }
