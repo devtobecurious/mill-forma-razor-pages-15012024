@@ -1,0 +1,51 @@
+﻿@page
+@model StarWars.Games.BackOffice.Web.UI.Pages.AddGameModel
+@{
+	Layout = "_AdminLayout";
+	
+}
+
+<div class="row">
+	<div class="col-3">
+		<label for="date" class="form-label">Date</label>
+		<div class="form-group">
+			<div class='input-group date' id='dtp1'>
+				<input type='text' class="form-control" id="date"/>
+				<span class="input-group-addon">
+					<span class="glyphicon glyphicon-calendar"></span>
+				</span>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-3">
+		<label for="date" class="form-label">Gagnée ?</label>
+		<div class="form-check form-switch">
+			<input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+		</div>
+	</div>
+	@{
+		var listItem = Model.VideoGames.Select(item => new SelectListItem() { Value = item.Id.ToString(), Text = item.Name });
+	}
+	<div class="col-md-3">
+		<label for="date" class="form-label">Jeu-vidéo</label>
+		<select asp-items="listItem" class="form-select form-select-lg mb-3" aria-label="Ton jeu-vidéo">
+			<option></option>
+		</select>			
+	</div>
+</div>
+
+@section Css 
+{
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
+}
+
+@section scripts
+{
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+	<script type="text/javascript">
+		$(function () {
+			$('#dtp1').datepicker();
+		});
+	</script>
+}
