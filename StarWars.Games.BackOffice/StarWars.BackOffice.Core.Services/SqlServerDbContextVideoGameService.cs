@@ -17,17 +17,18 @@ namespace StarWars.BackOffice.Core.Services
 		{
 			var query = from videoGame in context.VideoGames
 						where videoGame.Name != ""
+						orderby videoGame.Name ascending
 						select videoGame;
 
 			//return this.context.VideoGames.ToList();
 			// return query.ToList();
 
-
-			return this.context.VideoGames
+			var query2 = this.context.VideoGames
 								.Where(item => item.Name != "")
 								.Select(item => item) // A en parler
-								.Take(100) // perf à parler
-								.ToList(); // c'est le ToList qui lance la requête SQL !! 
+								.Take(100); // perf à parler
+
+			return query2.OrderByDescending(item => item.Name).ThenByDescending(item => item.Id).ToList(); // c'est le ToList qui lance la requête SQL !! 
 		}
 
 		public VideoGame GetOne(int? id)
