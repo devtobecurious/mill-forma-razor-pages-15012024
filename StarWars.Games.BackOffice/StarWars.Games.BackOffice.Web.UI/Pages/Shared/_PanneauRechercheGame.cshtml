@@ -1,0 +1,29 @@
+﻿@using System.Collections.Generic
+@model Dictionary<string, string>
+
+<form>
+	<div class="row">
+		<div col="col-3">
+			<h2>Recherche</h2>
+		</div>
+	</div>
+	<div class="row">
+		<div col="col-3">
+			Etat
+		</div>
+		<div col="col-3">
+			<select name="Etat" class="form-select" aria-label="Default select example">
+				<option selected>Etat de la partie</option>
+				@foreach(var item in Model)
+				{
+					<option value="@item.Key">@item.Value</option>
+				}
+			</select>
+		</div>
+	</div>
+	<div class="row">
+		<div col="col-3">
+			<button>Recherche</button>
+		</div>
+	</div>
+</form>
