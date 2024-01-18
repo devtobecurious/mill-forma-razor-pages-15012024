@@ -9,7 +9,7 @@ namespace StarWars.Games.BackOffice.Web.UI.App_Code.MethodesExtensions
 	public static class ServiceCollectionsExtensionMethods
 	{
 		#region Public methods
-		public static IServiceCollection AddCustomInjectionDependances(this IServiceCollection services)
+		public static IServiceCollection AddCustomInjectionDependances(this IServiceCollection services, IConfiguration configuration)
 		{
 			//TODO: 16/01/2024: Refacto => méthodes d'extension
 #if DEBUG
@@ -20,7 +20,8 @@ namespace StarWars.Games.BackOffice.Web.UI.App_Code.MethodesExtensions
 
 			services.AddDbContext<DefaultDbContext>(options =>
 			{
-				options.UseSqlServer("Server=DESKTOP-1446PBQ;Database=StarWars.BackOffice.Db.DEV;Trusted_Connection=True;TrustServerCertificate=true");
+				options.UseSqlServer(configuration.GetConnectionString("BackOffice.DB"),
+									 b => b.MigrationsAssembly("StarWars.Games.BackOffice.Web.UI"));
 			});
 
 			services.AddScoped<IVideoGameService, SqlServerDbContextVideoGameService>();

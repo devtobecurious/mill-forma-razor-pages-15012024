@@ -1,8 +1,13 @@
-﻿namespace StarWars.BackOffice.Core.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace StarWars.BackOffice.Core.Models
 {
 	public class Statistic
 	{
 		#region Properties
+		[Key]
+		public string FakeId { get; set; }
+
 		public int Annee { get; set; }
 
 		public int Mois { get; set; }

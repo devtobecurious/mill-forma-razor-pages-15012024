@@ -20,6 +20,7 @@ namespace StarWars.BackOffice.Core.Services
 						orderby videoGame.Name ascending
 						select videoGame;
 
+
 			//return this.context.VideoGames.ToList();
 			// return query.ToList();
 

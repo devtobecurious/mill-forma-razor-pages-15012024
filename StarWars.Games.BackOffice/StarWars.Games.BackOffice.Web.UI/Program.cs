@@ -7,7 +7,7 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddHttpClient();
 
-builder.Services.AddCustomInjectionDependances();
+builder.Services.AddCustomInjectionDependances(builder.Configuration);
 #endregion
 
 

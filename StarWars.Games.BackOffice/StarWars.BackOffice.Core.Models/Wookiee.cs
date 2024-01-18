@@ -6,6 +6,8 @@ namespace StarWars.BackOffice.Core.Models
 	{
 		[StringLength(3, ErrorMessage = "Longueur max de 3 !")]
 		public string Prenom { get; set; } = string.Empty;
+
+		[Required]
 		public string? Nom { get; set; }
 
 		[DataType(DataType.EmailAddress)]
