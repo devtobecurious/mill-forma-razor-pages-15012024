@@ -2,7 +2,6 @@
 @model StarWars.Games.BackOffice.Web.UI.Pages.AddGameModel
 @{
 	Layout = "_AdminLayout";
-	
 }
 
 <input type="date" />
@@ -12,7 +11,7 @@
 		<label for="date" class="form-label">Date</label>
 		<div class="form-group">
 			<div class='input-group date' id='dtp1'>
-				<input type='text' class="form-control" id="date"/>
+				<input type='text' class="form-control" id="date" />
 				<span class="input-group-addon">
 					<span class="glyphicon glyphicon-calendar"></span>
 				</span>
@@ -26,19 +25,19 @@
 		</div>
 	</div>
 	@{
-		var listItem = Model.VideoGames.Select(item => new SelectListItem() { Value = item.Id.ToString(), Text = item.Name });
+		var listItem = Model.VideoGames!.Select(item => new SelectListItem() { Value = item.Id.ToString(), Text = item.Name });
 	}
 	<div class="col-md-3">
 		<label for="date" class="form-label">Jeu-vidéo</label>
 		<select asp-items="listItem" class="form-select form-select-lg mb-3" aria-label="Ton jeu-vidéo">
 			<option></option>
-		</select>			
+		</select>
 	</div>
 </div>
 
 <div class="row">
 	@{
-		var listPersos = Model.Personnages.Select(item => new SelectListItem() { Value = item.Id.ToString(), Text = item.Surname });
+		var listPersos = Model.Personnages?.Select(item => new SelectListItem() { Value = item.Id.ToString(), Text = item.Surname });
 	}
 	<div class="col-3">
 		<label for="date" class="form-label">Personnage</label>
@@ -48,7 +47,31 @@
 	</div>
 </div>
 
-@section Css 
+@if (Model.Amis != null)
+{
+	<div class="row">
+		<div class="col-2">
+			<h2>Tu as joué avec quel-le-s ami-e-s ?</h2>
+		</div>
+	</div>
+
+	<div class="row">
+		<div class="col-6">
+			<table class="table">
+				@foreach (var ami in Model.Amis)
+				{
+					<tr>
+						<td>@ami.Prenom</td>
+						<td>
+							<input type="checkbox" name="@ami.Id" />
+						</td>
+					</tr>
+				}
+			</table>
+		</div>
+	</div>
+}
+@section Css
 {
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">

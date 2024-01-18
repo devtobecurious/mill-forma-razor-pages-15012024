@@ -26,6 +26,7 @@ namespace StarWars.Games.BackOffice.Web.UI.App_Code.MethodesExtensions
 			services.AddScoped<IVideoGameService, SqlServerDbContextVideoGameService>();
 			services.AddScoped<IGameService, InMemoryGameService>();
 			services.AddScoped<IStatisticService, StatisticService>();
+			services.AddScoped<IAmiService, SqlServerDbContextAmiService>();
 			// services.AddScoped<IPersonService, InMemoryPersonnageService>();
 			services.AddScoped<IPersonService, HttpClientPersonnageService>();
 

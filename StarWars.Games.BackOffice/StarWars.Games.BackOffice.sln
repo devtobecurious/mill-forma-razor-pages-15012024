@@ -21,6 +21,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakeLoggerTest", "FakeLogge
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWars.BackOffice.Core.Services.InMemories", "StarWars.BackOffice.Core.Services.InMemories\StarWars.BackOffice.Core.Services.InMemories.csproj", "{6ADF0088-BBE3-4553-BE94-63AC9E4EB391}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Learnings", "Learnings", "{62968D51-C37D-4698-A61E-4910B42AE7A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecouverteCsharpLatest", "DecouverteCsharpLatest\DecouverteCsharpLatest.csproj", "{FC24735C-CD25-4EBD-9B8F-C14518FE29E5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +59,10 @@ Global
 		{6ADF0088-BBE3-4553-BE94-63AC9E4EB391}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6ADF0088-BBE3-4553-BE94-63AC9E4EB391}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6ADF0088-BBE3-4553-BE94-63AC9E4EB391}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC24735C-CD25-4EBD-9B8F-C14518FE29E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC24735C-CD25-4EBD-9B8F-C14518FE29E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC24735C-CD25-4EBD-9B8F-C14518FE29E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC24735C-CD25-4EBD-9B8F-C14518FE29E5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +75,8 @@ Global
 		{F34EDA39-AFE5-4AA1-9949-9E523AC00C4B} = {074322EF-AD26-47C8-8D2C-48C160D70414}
 		{233ED183-FDF7-4D58-A3E3-3F208D94ED06} = {074322EF-AD26-47C8-8D2C-48C160D70414}
 		{6ADF0088-BBE3-4553-BE94-63AC9E4EB391} = {074322EF-AD26-47C8-8D2C-48C160D70414}
+		{62968D51-C37D-4698-A61E-4910B42AE7A8} = {074322EF-AD26-47C8-8D2C-48C160D70414}
+		{FC24735C-CD25-4EBD-9B8F-C14518FE29E5} = {62968D51-C37D-4698-A61E-4910B42AE7A8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A47576BC-B440-4B50-9493-3BF1042A786E}
