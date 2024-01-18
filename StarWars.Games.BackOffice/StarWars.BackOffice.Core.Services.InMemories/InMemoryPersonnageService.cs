@@ -15,5 +15,10 @@ namespace StarWars.BackOffice.Core.Services.InMemories
 				new PersonneAJouer() { Id = 4, Surname = "Yoda" }
 			};
 		}
+
+		public Task<List<PersonneAJouer>> GetAllAsync()
+		{
+			throw new NotImplementedException();
+		}
 	}
 }

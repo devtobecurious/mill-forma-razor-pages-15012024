@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\StarWars.BackOffice.Core.Models\StarWars.BackOffice.Core.Models.csproj" />
     <ProjectReference Include="..\StarWars.Games.Core.Interfaces\StarWars.Games.Core.Interfaces.csproj" />
   </ItemGroup>
