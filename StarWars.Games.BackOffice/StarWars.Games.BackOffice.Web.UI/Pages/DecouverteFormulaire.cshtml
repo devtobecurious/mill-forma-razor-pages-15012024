@@ -4,9 +4,15 @@
 }
 
 <form method="post">
-	<input name="prenom" type="text" />
-	<input name="nom" type="text" />
-	<input name="age" type="number" />
+	<div asp-validation-summary="All" class="text-danger"></div>
+
+	<input asp-for="Wookiee.Prenom" maxlength="5" />
+	<span asp-validation-for="Wookiee.Prenom"></span>
+	<input asp-for="Wookiee.Nom" />
+	<input asp-for="Wookiee.Age" />
+	<input asp-for="Wookiee.Email" />
+	<span asp-validation-for="Wookiee.Email"></span>
+
 
 	@* <input type="submit" /> *@
 	<button>Send</button>
@@ -16,3 +22,8 @@
 	<input type="hidden" value="2" name="pagination" />
 	<button>Page 2</button>
 </form>
+
+@section scripts
+{
+	<partial name="_ValidationScriptsPartial" />
+}

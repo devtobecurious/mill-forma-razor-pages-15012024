@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using StarWars.BackOffice.Core.Models;
 
 namespace StarWars.Games.BackOffice.Web.UI.Pages
 {
@@ -25,7 +26,13 @@ namespace StarWars.Games.BackOffice.Web.UI.Pages
 
 		public void OnPost()
 		{
+			if (ModelState.IsValid)
+			{
+
+			}
 		}
+
+		public Wookiee Wookiee { get; set; } = new Wookiee();
 
 		// Possibilité par property
 		//[BindProperty]
@@ -35,12 +42,12 @@ namespace StarWars.Games.BackOffice.Web.UI.Pages
 		//public string Nom { get; set; } = "";
 
 
-		public string Prenom { get; set; } = "";
+		//public string Prenom { get; set; } = "";
 
 
-		public string Nom { get; set; } = "";
+		//public string Nom { get; set; } = "";
 
-		public int Pagination { get; set; }
+		//public int Pagination { get; set; }
 	}
 
 	public class Toto
@@ -51,12 +58,6 @@ namespace StarWars.Games.BackOffice.Web.UI.Pages
 		public int Age { get; set; }
 	}
 
-	public class Wookiee
-	{
-		public string? Prenom { get; set; }
-		public string? Nom { get; set; }
 
-		public int Age { get; set; }
-	}
 }
 
