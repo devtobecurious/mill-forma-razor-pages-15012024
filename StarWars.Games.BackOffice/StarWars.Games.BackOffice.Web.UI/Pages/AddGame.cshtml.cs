@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using StarWars.BackOffice.Core.Models;
 using StarWars.Games.Core.Interfaces;
@@ -30,6 +31,9 @@ namespace StarWars.Games.BackOffice.Web.UI.Pages
 		public List<PersonneAJouer>? Personnages { get; set; }
 
 		public List<Ami>? Amis { get; set; }
+
+		[BindProperty]
+		public List<int> ListAmisSelectionnes { get; set; } = new List<int>();
 	}
 
 }

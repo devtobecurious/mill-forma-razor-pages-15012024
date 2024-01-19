@@ -1,9 +1,22 @@
+using Microsoft.EntityFrameworkCore;
 using StarWars.Games.BackOffice.Web.UI.App_Code.CustomSettings;
 using StarWars.Games.BackOffice.Web.UI.App_Code.MethodesExtensions;
+using StarWars.Games.BackOffice.Web.UI.Areas.Identity.Data;
+using StarWars.Games.BackOffice.Web.UI.Data;
 
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("CustomIdentityContextConnection") ?? throw new InvalidOperationException("Connection string 'CustomIdentityContextConnection' not found.");
 
-#region Injection de dépendances / Paramétrages
+builder.Services.AddDbContext<CustomIdentityContext>(options =>
+    options.UseSqlServer(connectionString));
+
+builder.Services.AddDefaultIdentity<CustomUser>(options =>
+{
+    options.SignIn.RequireConfirmedAccount = true;
+})
+    .AddEntityFrameworkStores<CustomIdentityContext>();
+
+#region Injection de dï¿½pendances / Paramï¿½trages
 builder.Services.AddRazorPages();
 
 builder.Services.AddHttpClient();
@@ -36,8 +49,11 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseAuthentication(); ;
 
 app.UseAuthorization();
+
+
 #endregion
 
 #region Endpoints 
