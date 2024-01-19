@@ -4,6 +4,14 @@
     ViewData["Title"] = "Home page";
 }
 
+<environment include="Development, Staging">
+    <i>JE SUIS EN DEV</i>
+</environment>
+
+<environment exclude="Production">
+    <i>JE SUIS EN TEST</i>
+</environment>
+
 <div class="container">
     <div class="row">
         <div class='col-sm-6'>

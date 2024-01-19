@@ -1,21 +1,33 @@
-﻿{
-  "iisSettings": {
-    "windowsAuthentication": false,
-    "anonymousAuthentication": true,
-    "iisExpress": {
-      "applicationUrl": "http://localhost:20413",
-      "sslPort": 44321
-    }
-  },
+{
   "profiles": {
     "StarWars.Games.BackOffice.Web.UI": {
       "commandName": "Project",
-      "dotnetRunMessages": true,
+      "commandLineArgs": "test=1",
       "launchBrowser": true,
-      "applicationUrl": "https://localhost:7080;http://localhost:5205",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
-      }
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:7080;http://localhost:5205"
+    },
+    "StarWars.Games.BackOffice.Web.UI.PROD": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Production"
+      },
+      "dotnetRunMessages": true,
+      "applicationUrl": "https://localhost:7080;http://localhost:5205"
+    },
+    "WSL": {
+      "commandName": "WSL2",
+      "launchBrowser": true,
+      "launchUrl": "https://localhost:7080",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ASPNETCORE_URLS": "https://localhost:7080;http://localhost:5205"
+      },
+      "distributionName": ""
     },
     "IIS Express": {
       "commandName": "IISExpress",
@@ -23,6 +35,14 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
+    }
+  },
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:20413",
+      "sslPort": 44321
     }
   }
 }
