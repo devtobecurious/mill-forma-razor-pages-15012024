@@ -13,17 +13,17 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarWars.BackOffice.Core.Mo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarWars.BackOffice.Core.Services", "StarWars.BackOffice.Core.Services\StarWars.BackOffice.Core.Services.csproj", "{2EDD014F-4ED3-4473-BB23-78576C6C5D5E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWars.Games.Core.Interfaces", "StarWars.Games.Core.Interfaces\StarWars.Games.Core.Interfaces.csproj", "{ECC037DD-37CD-4FFC-9982-18AC370CA667}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarWars.Games.Core.Interfaces", "StarWars.Games.Core.Interfaces\StarWars.Games.Core.Interfaces.csproj", "{ECC037DD-37CD-4FFC-9982-18AC370CA667}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWars.Games.Core.Tools", "StarWars.Games.Core.Tools\StarWars.Games.Core.Tools.csproj", "{F34EDA39-AFE5-4AA1-9949-9E523AC00C4B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarWars.Games.Core.Tools", "StarWars.Games.Core.Tools\StarWars.Games.Core.Tools.csproj", "{F34EDA39-AFE5-4AA1-9949-9E523AC00C4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakeLoggerTest", "FakeLoggerTest\FakeLoggerTest.csproj", "{233ED183-FDF7-4D58-A3E3-3F208D94ED06}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FakeLoggerTest", "FakeLoggerTest\FakeLoggerTest.csproj", "{233ED183-FDF7-4D58-A3E3-3F208D94ED06}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StarWars.BackOffice.Core.Services.InMemories", "StarWars.BackOffice.Core.Services.InMemories\StarWars.BackOffice.Core.Services.InMemories.csproj", "{6ADF0088-BBE3-4553-BE94-63AC9E4EB391}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StarWars.BackOffice.Core.Services.InMemories", "StarWars.BackOffice.Core.Services.InMemories\StarWars.BackOffice.Core.Services.InMemories.csproj", "{6ADF0088-BBE3-4553-BE94-63AC9E4EB391}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Learnings", "Learnings", "{62968D51-C37D-4698-A61E-4910B42AE7A8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DecouverteCsharpLatest", "DecouverteCsharpLatest\DecouverteCsharpLatest.csproj", "{FC24735C-CD25-4EBD-9B8F-C14518FE29E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DecouverteCsharpLatest", "DecouverteCsharpLatest\DecouverteCsharpLatest.csproj", "{FC24735C-CD25-4EBD-9B8F-C14518FE29E5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

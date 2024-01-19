@@ -8,13 +8,13 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("CustomIdentityContextConnection") ?? throw new InvalidOperationException("Connection string 'CustomIdentityContextConnection' not found.");
 
 builder.Services.AddDbContext<CustomIdentityContext>(options =>
-    options.UseSqlServer(connectionString));
+	options.UseSqlServer(connectionString));
 
 builder.Services.AddDefaultIdentity<CustomUser>(options =>
 {
-    options.SignIn.RequireConfirmedAccount = true;
+	options.SignIn.RequireConfirmedAccount = true;
 })
-    .AddEntityFrameworkStores<CustomIdentityContext>();
+	.AddEntityFrameworkStores<CustomIdentityContext>();
 
 #region Injection de d�pendances / Param�trages
 builder.Services.AddRazorPages();
@@ -29,7 +29,13 @@ builder.Services.Configure<SearchSetting>(builder.Configuration.GetSection("Rech
 
 builder.Services.AddCustomInjectionDependances(builder.Configuration);
 
-
+#region Sessions
+builder.Services.AddDistributedMemoryCache();
+builder.Services.AddSession(options =>
+{
+	options.IdleTimeout = TimeSpan.FromMinutes(20);
+});
+#endregion
 #endregion
 
 
@@ -40,14 +46,14 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment()) // IsEnvironment("VotreEnv")
 {
-    app.UseExceptionHandler("/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-    app.UseHsts();
+	app.UseExceptionHandler("/Error");
+	// The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+	app.UseHsts();
 }
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-
+app.UseSession();
 app.UseRouting();
 app.UseAuthentication(); ;
 

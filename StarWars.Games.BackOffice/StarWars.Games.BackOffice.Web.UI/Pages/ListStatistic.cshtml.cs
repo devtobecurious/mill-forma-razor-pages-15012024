@@ -17,6 +17,8 @@ namespace StarWars.Games.BackOffice.Web.UI.Pages
 
 		public void OnGet()
 		{
+			var id = HttpContext.Session.GetString("Id");
+
 			this.List = this.service.GetAll();
 
 			//foreach (var item in this.List)
