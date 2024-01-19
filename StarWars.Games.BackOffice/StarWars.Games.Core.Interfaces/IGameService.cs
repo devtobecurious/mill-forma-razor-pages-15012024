@@ -2,7 +2,7 @@
 
 namespace StarWars.Games.Core.Interfaces
 {
-	public interface IGameService : IGetAll<Game>, IGetAllWithFilters<Game>
-	{
-	}
+    public interface IGameService : IGetAll<Game>, IGetAllWithFilters<Game>, IAddOne<Game>
+    {
+    }
 }
